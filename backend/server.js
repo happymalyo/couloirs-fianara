@@ -31,7 +31,7 @@ app.use('/users', usersRouter);
 app.use('/services', servicesRouter);
 
 app.get('/', (req, res) => {
-  res.send('No route for this my dear!');
+  res.send('Hello from express');
 });
 
 try{
