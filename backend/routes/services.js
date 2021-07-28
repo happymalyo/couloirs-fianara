@@ -68,7 +68,7 @@ router.route('/update/:id').post(upload.single('image'), (req, res) => {
             service.email = req.body.email;
 
             service.save().then(() => {
-                console.log('hey saved')
+                console.log('hey updated')
             }).catch((err) => {
                 console.log(err)
             })

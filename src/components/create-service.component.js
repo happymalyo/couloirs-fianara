@@ -66,10 +66,13 @@ const CreateService = () => {
         setPicture(URL.createObjectURL(e.target.files[0]) );
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        sendService(newService)
+        await sendService(newService)
+        
         history.push('/services/dashboard');
+        
+        
     };
 
    
@@ -128,11 +131,11 @@ const CreateService = () => {
                                 required
                             >
                                 <option value="">selectionnez...</option>
-                                <option value="universite" className="uppercase">universite</option>
-                                <option value="lycee" className="uppercase">lycee</option>
-                                <option value="formation" className="uppercase">formation</option>
-                                <option value="electricien" className="uppercase">electricien</option>
-                                <option value="reparation phone" className="uppercase">reparation de telephone</option>
+                                <option value="universite" className="uppercase">Universite</option>
+                                <option value="lycee" className="uppercase">Lycee</option>
+                                <option value="formation" className="uppercase">Formation</option>
+                                <option value="electricien" className="uppercase">Electricien</option>
+                                <option value="reparation phone" className="uppercase">Reparation de Telephone</option>
                                 <option value="danse club" className="uppercase">Club de danse</option>
                             </select>
                             <div class={classStyle.selectIcon}>
